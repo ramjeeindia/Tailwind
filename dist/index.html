@@ -1,39 +1,55 @@
+<!-- Tailwind Installation -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailwind</title>
-
-    <!-- Method 1 : Copy cdn play link then all css will links -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-
-
-
-</head>
-<body>
-
-Method 1:
-
-  <h1 class="text-3xl font-bold underline">Hello world!</h1>
-<br>
-
-  Method 2: 
-
-    <h1 class="text-red-950">Installation Tailwind</h1>
+    <link rel="stylesheet" href="tailstyle.css" />
+  </head>
+  <body class="bg-slate-300 text-indigo-950 m-10 p-5">
+    <h1 class="bg-red-400">Installation Tailwind</h1>
     <a href="https://nodejs.org/en" target="_blank">Nods js Install</a>
-    <br>
-    <a href="https://tailwindcss.com/docs/installation" target="_blank"> Tailwind CSS Installation command </a>
-    <p>Terminal</p>
-    <code>npm install -D tailwindcss</code>
-    <code>npx tailwindcss init</code>
-    check note installed using code -: node --version
+     <br />
+    <a href="https://tailwindcss.com/docs/installation" target="_blank">Tailwind CSS Installation command </a>
+    <h2>Tailwaid Installation Steps</h2>
+    <p>1. Install node.js</p>
+    <p>2. run command in vs code for checking installation : node -v</p>
+    <p>3. for creating package.json file run : npm init</p>
+    <p>press Enter Enter .....</p>
+    <p>4. npm install -D tailwindcss</p>
+    <p>5. npx tailwindcss init</p>
+    <h2 class="bg-red-500">Create two folder name dist and src</h2>
+    <p>under dist create two file name like index.html and tailstyle.css</p>
+    <p>under src create file name like input.css</p>
+    <p>Paste the below command in input.css</p>
+    @tailwind base; @tailwind components; @tailwind utilities;
+    <p>modify the tailwind.config.js file</p>
+    /** @type {import('tailwindcss').Config} */ module.exports = { content:
+    ["./dist/*.{html,js}"], theme: { extend: {}, }, plugins: [], }
 
-    npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+    <p>
+      run command : npx tailwindcss -i ./src/input.css -o ./dist/tailstyle.css
+      --watch
+    </p>
+    <p>
+      where src/input is default file for tailwind and dist/tailstyle.css output
+      file
+    </p>
 
-    npx tailwindcss -i ./src/input.css -o ./dist/index.css --watch
+    <code>npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch</code>
 
-
-</body>
+    <h2 class="bg-red-600">
+      The above code run every time for new project then we can put package.json
+      file
+    </h2>
+    <p>before</p>
+    <p>"scripts": { "test": "echo \"Error: no test specified\" && exit 1" },</p>
+    <p>after</p>
+    <p>
+      "scripts": { "test": "echo \"Error: no test specified\" && exit 1", "div":
+      "tailwindcss -i ./src/input.css -o ./dist/tailstyle.css --watch" },
+    </p>
+    <p>now we can run command : npm run div</p>
+  </body>
 </html>
