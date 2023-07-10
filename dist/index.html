@@ -51,5 +51,23 @@
       "tailwindcss -i ./src/input.css -o ./dist/tailstyle.css --watch" },
     </p>
     <p>now we can run command : npm run div</p>
+
+    <h2>Troubleshooting</h2>
+    <!-- run watch -->
+npm run div 
+<!-- Push to remote repo -->
+git push --force https://github.com/ramjeeindia/Tailwind.git
+
+
+
+Delete that repo and create a new one and try the following commands again:
+
+cd 'Local Directory Path'
+git remote add origin *your_git_name.git*
+git push -u origin master
+if add origin shows already exists use this instead:
+
+git remote set-url origin *https://github.com/ramjeeindia/Tailwind*
+
   </body>
 </html>
